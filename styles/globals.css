@@ -1,26 +1,755 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Apply consistent font across all pages */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding-top: 120px; /* Increased padding to account for both top bar and header */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Global button styling */
+button {
+  background: linear-gradient(135deg, #ff8c00, #b22222);
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #b22222, #ff8c00);
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding-top: 70px; /* Slightly less padding on mobile */
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Core Values Section - Updated Styling */
+.core-values-section {
+  background: white;
+  padding: 80px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.core-values-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  z-index: -1;
+}
+
+.values-container {
+  position: relative;
+  z-index: 2;
+}
+
+.values-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.values-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.value-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.value-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.value-card a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: #2c5282;
+}
+
+.practice-icon {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.value-card:hover .practice-icon {
+  color: #3498db;
+}
+
+.value-card h3 {
+  color: #1a365d;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.value-card:hover h3 {
+  color: #3498db;
+}
+
+.value-card p {
+  color: #4a5568;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive Design for Core Values */
+@media (max-width: 768px) {
+  .values-wrapper {
+    flex-direction: column;
+  }
+  
+  .values-column {
+    width: 100%;
+  }
+  
+  .value-card {
+    width: 100%;
+  }
+}
+
+/* Success Stories Section */
+.success-stories {
+  padding: 80px 0;
+  background: white;
+}
+
+.stories-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.story-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+.story-content {
+  padding: 30px;
+}
+
+.result {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 5px 15px;
+  background: #2c3e50;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Community Impact Section */
+.community-impact {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.impact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.impact-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.impact-icon {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Timeline Section */
+.firm-timeline {
+  padding: 80px 0;
+  background: white;
+}
+
+.timeline-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 40px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: #2c3e50;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-item:nth-child(odd) .content {
+  margin-left: 50px;
+}
+
+.timeline-item:nth-child(even) .content {
+  margin-right: 50px;
+  text-align: right;
+}
+
+.year {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2c3e50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.content {
+  width: 45%;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+}
+
+.cta-button.primary {
+  background: white;
+  color: #2c3e50;
+}
+
+.cta-button.secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item {
+    justify-content: flex-start;
+  }
+
+  .timeline-item .content {
+    width: calc(100% - 80px);
+    margin-left: 80px !important;
+    text-align: left !important;
+  }
+
+  .year {
+    left: 30px;
+    transform: none;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* About Page Styles */
+.about-hero {
+  background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.9)), url('/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(26, 54, 93, 0.95), rgba(44, 82, 130, 0.9));
+}
+
+.herro-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.firm-name {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: #e2e8f0;
+  margin-bottom: 1.5rem;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  color: #cbd5e0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Section Headings */
+section h2 {
+  color: #1a365d;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #2c5282, #4299e1);
+}
+
+/* Section Backgrounds */
+.our-story-section {
+  background-color: white;
+  padding: 80px 0;
+}
+
+.mission-vision-values {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 80px 0;
+}
+
+.why-choose-us {
+  background-color: white;
+  padding: 80px 0;
+}
+
+.leadership-team {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 80px 0;
+}
+
+.client-testimonials {
+  background-color: white;
+  padding: 80px 0;
+}
+
+.core-values-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 80px 0;
+}
+
+/* Card Styles */
+.mvv-box, .choose-card, .team-member, .testimonial-box, .value-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 30px;
+}
+
+.mvv-box:hover, .choose-card:hover, .team-member:hover, .testimonial-box:hover, .value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Subheadings */
+h3, h4 {
+  color: #2c5282;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Text Colors */
+p {
+  color: #4a5568;
+  line-height: 1.7;
+}
+
+/* Section Containers */
+.story-container, .mvv-container, .choose-container, .team-container, 
+.testimonials-container, .values-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Practice Areas Section */
+.practice-icon {
+  color: #2c5282;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.value-card:hover .practice-icon {
+  color: #4299e1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  section h2 {
+    font-size: 2rem;
+  }
+  
+  .firm-name {
+    font-size: 2.5rem;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+  }
+  
+  .intro-text {
+    font-size: 1rem;
+  }
+}
+
+/* Footer Fixes */
+footer {
+  background: #1a365d;
+  color: white;
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+  padding: 60px 0 30px;
+}
+
+footer h3, 
+footer h4 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+footer p,
+footer a {
+  color: #e2e8f0;
+}
+
+footer a:hover {
+  color: white;
+}
+
+footer .footer-bottom {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Ensure proper spacing between sections */
+section:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Fix any potential z-index issues */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Scroll Indicator Styles */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+  opacity: 1;
+}
+
+.scroll-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.scroll-arrow {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Practice Areas Hover Effects */
+.practice-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.practice-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.practice-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* About Us Section Animations */
+.about-feature {
+  transition: transform 0.3s ease;
+}
+
+.about-feature:hover {
+  transform: translateX(1rem);
+}
+
+/* TopBar Styles */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background: #1e3a8a;
+  color: #fff;
+  font-size: 0.85rem;
+  box-shadow: 0 1px 4px rgba(30,58,138,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 1rem;
+  min-height: 36px;
+}
+
+@media (max-width: 640px) {
+  .top-bar {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+    min-height: 28px;
+  }
+}
+
+.site-header {
+  position: fixed;
+  top: 36px;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: #1e3a8a; /* solid dark blue background */
+  box-shadow: 0 2px 8px rgba(30,58,138,0.04);
+  transition: box-shadow 0.2s;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding-top: 100px;
+  }
+  
+  .site-header {
+    top: 28px;
+  }
+}
+
+.header-main-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2.5rem 0.5rem 2rem;
+  width: 100%;
+  margin: 0;
+  height: 90px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.header-logo img {
+  display: block;
+  max-width: 220px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #ffb300;
+}
+
+@media (max-width: 1024px) {
+  .header-main-bar {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    height: 70px;
+  }
+  .header-logo {
+    height: 60px;
+  }
+  .header-logo img {
+    max-width: 140px;
+    max-height: 60px;
+  }
+}
+
+/* Add spacing below header for main content */
+main {
+  margin-top: 0;
 }

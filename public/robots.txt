@@ -1,0 +1,46 @@
+# robots.txt for Kenyan Law Firm Website
+# Optimized for Google Kenya (google.co.ke) and other search engines
+
+User-agent: *
+# Disallow admin and private or non-public routes
+Disallow: /admin/
+Disallow: /login
+Disallow: /register
+Disallow: /dashboard
+Disallow: /user/
+Disallow: /api/
+Disallow: /checkout
+Disallow: /cart
+Disallow: /404
+Disallow: /500
+Disallow: /_next/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /test/
+Disallow: /drafts/
+Disallow: /another
+
+# Prevent crawling of URL parameters that may create duplicate content
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+Disallow: /*?*session=
+Disallow: /*?*preview=
+
+# Allow SEO-critical pages
+Allow: /
+Allow: /about
+Allow: /contact
+Allow: /blog/
+Allow: /blog/*
+Allow: /practice/
+Allow: /practice/*
+Allow: /attorneys
+Allow: /legal-team
+Allow: /faq
+Allow: /services/
+Allow: /services/*
+Allow: /privacy-policy
+Allow: /terms-and-conditions
+
+# Sitemap location
+Sitemap: https://yourdomain.co.ke/sitemap.xml
