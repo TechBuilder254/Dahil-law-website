@@ -32,7 +32,9 @@ const Footer = () => {
             E-mail: <a href="mailto:Abdulhakimdahir@daadvocates.co.ke" className="email-link">Abdulhakimdahir@daadvocates.co.ke</a>
           </p>
           <p><FaMapMarkerAlt className="footer-icon" /> Address: 623 WOOD AVENUE PLAZA, 8th Floor, Wood Avenue, Kilimani, Nairobi</p>
+          <p><FaMapMarkerAlt className="footer-icon" /> Address: Business Bay Square (BBS) lower ground office no 77$78, Nairobi</p>
         </div>
+     
       </div>
 
       {/* Copyright & Developer Credit */}

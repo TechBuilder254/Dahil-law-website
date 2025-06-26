@@ -690,16 +690,46 @@ main {
   }
 }
 
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 100%;          /* Removes 1200px limit */
+  margin: 0;                /* Removes centering */
+  padding: 0;               /* Removes spacing from sides */
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+main {
+  padding-top: 120px; /* Pushes content below fixed top-bar + header */
+}
+
+/* HEADER MAIN BAR */
 .header-main-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;                /* Allow wrapping on small screens */
   padding: 0.5rem 2.5rem 0.5rem 2rem;
   width: 100%;
   margin: 0;
   height: 90px;
+  overflow-x: hidden;             /* Prevent overflow */
 }
 
+/* LOGO */
 .header-logo {
   display: flex;
   align-items: center;
@@ -715,10 +745,14 @@ main {
   object-fit: contain;
 }
 
+/* NAVIGATION LINKS */
 .nav-links {
   display: flex;
+  flex-wrap: wrap;                /* Allow wrapping */
   gap: 2rem;
   align-items: center;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .nav-links a {
@@ -735,35 +769,39 @@ main {
   color: #ffb300;
 }
 
+/* APPOINTMENT BUTTON */
+.appointment-btn {
+  white-space: nowrap;
+  max-width: 100%;
+  padding: 0.4rem 1rem;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #00c853;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE MEDIA QUERY */
 @media (max-width: 1024px) {
   .header-main-bar {
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding: 0.5rem 1rem;
     height: 70px;
   }
+
   .header-logo {
     height: 60px;
   }
+
   .header-logo img {
     max-width: 140px;
     max-height: 60px;
   }
 }
 
-/* Add spacing below header for main content */
+/* MAIN CONTENT SPACING */
 main {
   margin-top: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.container {
-  width: 100%;
-  max-width: 1200px; /* Max width on desktop */
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem !important; /* 16px */
-  padding-right: 1rem !important; /* 16px */
 }

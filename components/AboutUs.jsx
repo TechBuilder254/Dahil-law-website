@@ -15,7 +15,7 @@ const AboutUs = () => {
             data-aos-easing="ease-out-cubic"
           >
             <img
-              src="/images/about-law.jpg"
+              src="/images/rep.png"
               alt="Law firm office"
               className="w-full h-full object-cover"
             />

@@ -52,7 +52,7 @@ const SectionOne = () => {
               </p>
             </div>
             <div className="story-image" data-aos="fade-left">
-              <img src="/images/our-story.jpg" alt="Lawyers at work" />
+              <img src="/images/rep.png" alt="Lawyers at work" />
             </div>
           </div>
         </section>
@@ -135,7 +135,7 @@ const SectionOne = () => {
 
             <div className="team-grid">
               <div className="team-member" data-aos="fade-up" data-aos-delay="0">
-                <img src="/images/team/affey.jpg" alt="Dahil Affey - Managing Partner" />
+                <img src="/images/rep.png" alt="Dahil Affey - Managing Partner" />
                 <h4>Dahil Affey</h4>
                 <p className="title">Managing Partner</p>
                 <p>
@@ -143,7 +143,7 @@ const SectionOne = () => {
                 </p>
               </div>
               <div className="team-member" data-aos="fade-up" data-aos-delay="100">
-                <img src="/images/team/amina.jpg" alt="Amina Yusuf - Senior Advocate" />
+                <img src="/images/rep.png" alt="Amina Yusuf - Senior Advocate" />
                 <h4>Amina Yusuf</h4>
                 <p className="title">Senior Advocate</p>
                 <p>
@@ -151,7 +151,7 @@ const SectionOne = () => {
                 </p>
               </div>
               <div className="team-member" data-aos="fade-up" data-aos-delay="200">
-                <img src="/images/team/otieno.jpg" alt="Joseph Otieno - Head of Litigation" />
+                <img src="/images/rep.png" alt="Joseph Otieno - Head of Litigation" />
                 <h4>Joseph Otieno</h4>
                 <p className="title">Head of Litigation</p>
                 <p>

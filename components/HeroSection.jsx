@@ -16,14 +16,14 @@ const slides = [
     link: '/practice'
   },
   {
-    image: '/images/about-law.jpg',
+    image: '/images/rep.png',
     heading: 'Guiding Businesses to Success',
     text: 'Corporate legal solutions designed for growth and compliance.',
     buttonText: 'EXPLORE SERVICES',
     link: '/practice'
   },
   {
-    image: '/images/image3.jpg',
+    image: '/images/rep.png',
     heading: 'Protecting Families, Securing Futures',
     text: 'Compassionate legal assistance in family and succession matters.',
     buttonText: 'GET LEGAL HELP',

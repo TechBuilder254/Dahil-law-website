@@ -10,19 +10,20 @@ const Attorneys = () => {
       name: 'Amina Yusuf',
       title: 'Senior Criminal Lawyer',
       bio: '15+ years in criminal defense with high-profile trial experience.',
-      image: '/assets/images/attorney1.jpg',
+      image:"/images/rep.png",
+      
     },
     {
       name: 'John Kamau',
       title: 'Corporate & Finance Lawyer',
       bio: 'Specializes in commercial litigation and corporate compliance.',
-      image: '/assets/images/attorney2.jpg',
+      image:"/images/rep.png",
     },
     {
       name: 'Lilian Ochieng',
       title: 'Family & Succession Lawyer',
       bio: 'Dedicated to resolving complex family law cases and mediation.',
-      image: '/assets/images/attorney3.jpg',
+      image:"/images/rep.png",
     },
   ];
 
