@@ -86,34 +86,39 @@ const PracticeAreas = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {practiceAreas.map((area, index) => (
-            <Link href={`/practice/${area.id}`} key={area.id}>
-              <div 
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-500 cursor-pointer border border-gray-100 transform hover:-translate-y-2 practice-card group flex flex-col justify-between h-full text-center"
-                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-                data-aos-delay={index * 100}
-                data-aos-duration="1200"
-                data-aos-easing="ease-out-cubic"
-              >
-                <div>
-                  {area.icon}
-                  <h3 className="text-xl font-semibold mb-2 text-blue-800">{area.title}</h3>
-                  <p className="text-gray-600 mb-6">{area.description}</p>
-                </div>
-                <div className="mt-auto flex justify-center">
-                  <span className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md font-medium text-sm shadow hover:bg-blue-700 transition-colors duration-200">
-                    Learn More
-                    <svg 
-                      className="w-4 h-4 ml-2" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            </Link>
+            <Link
+  href={`/practice/${area.id}`}
+  key={area.id}
+  className="block h-full"
+>
+  <div
+    className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-500 cursor-pointer border border-gray-100 transform hover:-translate-y-2 practice-card group flex flex-col justify-between h-full text-center"
+    data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+    data-aos-delay={index * 100}
+    data-aos-duration="1200"
+    data-aos-easing="ease-out-cubic"
+  >
+    <div>
+      {area.icon}
+      <h3 className="text-xl font-semibold mb-2 text-blue-800">{area.title}</h3>
+      <p className="text-gray-600 mb-6">{area.description}</p>
+    </div>
+    <div className="mt-auto flex justify-center">
+      <span className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md font-medium text-sm shadow hover:bg-blue-700 transition-colors duration-200">
+        Learn More
+        <svg 
+          className="w-4 h-4 ml-2" 
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </span>
+    </div>
+  </div>
+</Link>
+
           ))}
         </div>
         <div 
