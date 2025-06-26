@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import { FaBalanceScale, FaGavel, FaBriefcase, FaLandmark, FaUniversity, FaRegBuilding } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Link from 'next/link'; // Make sure this is at the top
 
 const SectionOne = () => {
   useEffect(() => {
@@ -196,60 +197,79 @@ const SectionOne = () => {
         </section>
        
 
-        {/* SECTION SEVEN: Core Values & Client Promise */}
-        <section className="core-values-section">
-          <div className="values-container">
-            <h2 data-aos="fade-up">Our Core Values & Client Promise</h2>
-            <div className="values-wrapper">
-              <div className="values-column left">
-                <div className="value-card" data-aos="fade-right" data-aos-delay="0">
-                  <a href="/practice/family-succession-law">
-                    <div className="practice-icon"><FaBalanceScale /></div>
-                    <h3>Family & Succession Law</h3>
-                    <p>Legal expertise in divorce, custody, inheritance, and estate planning.</p>
-                  </a>
-                </div>
-                <div className="value-card" data-aos="fade-right" data-aos-delay="100">
-                  <a href="/practice/criminal-law">
-                    <div className="practice-icon"><FaGavel /></div>
-                    <h3>Criminal Law</h3>
-                    <p>Strategic defense for individuals facing criminal charges and investigations.</p>
-                  </a>
-                </div>
-                <div className="value-card" data-aos="fade-right" data-aos-delay="200">
-                  <a href="/practice/commercial-law">
-                    <div className="practice-icon"><FaBriefcase /></div>
-                    <h3>Commercial Law</h3>
-                    <p>Legal support for businesses, contracts, trade regulations, and compliance.</p>
-                  </a>
-                </div>
-              </div>
-              <div className="values-column right">
-                <div className="value-card" data-aos="fade-left" data-aos-delay="0">
-                  <a href="/practice/corporate-law">
-                    <div className="practice-icon"><FaRegBuilding /></div>
-                    <h3>Corporate Law</h3>
-                    <p>Guiding businesses through structuring, governance, and compliance.</p>
-                  </a>
-                </div>
-                <div className="value-card" data-aos="fade-left" data-aos-delay="100">
-                  <a href="/practice/conveyancing">
-                    <div className="practice-icon"><FaLandmark /></div>
-                    <h3>Conveyancing</h3>
-                    <p>Expert legal guidance in property transactions and land transfers.</p>
-                  </a>
-                </div>
-                <div className="value-card" data-aos="fade-left" data-aos-delay="200">
-                  <a href="/practice/public-interest-litigation">
-                    <div className="practice-icon"><FaUniversity /></div>
-                    <h3>Public Interest Litigation</h3>
-                    <p>Advocating for social justice, environmental conservation, and human rights.</p>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+       {/* SECTION SEVEN: Core Values & Client Promise */}
+<section className="core-values-section">
+  <div className="values-container">
+    <h2 data-aos="fade-up">Our Core Values & Client Promise</h2>
+    <div className="values-wrapper">
+
+      <div className="values-column left">
+        <div className="value-card" data-aos="fade-right" data-aos-delay="0">
+          <Link href="/practice/family-succession-law" legacyBehavior>
+            <a>
+              <div className="practice-icon"><FaBalanceScale /></div>
+              <h3>Family & Succession Law</h3>
+              <p>Legal expertise in divorce, custody, inheritance, and estate planning.</p>
+            </a>
+          </Link>
+        </div>
+
+        <div className="value-card" data-aos="fade-right" data-aos-delay="100">
+          <Link href="/practice/criminal-law" legacyBehavior>
+            <a>
+              <div className="practice-icon"><FaGavel /></div>
+              <h3>Criminal Law</h3>
+              <p>Strategic defense for individuals facing criminal charges and investigations.</p>
+            </a>
+          </Link>
+        </div>
+
+        <div className="value-card" data-aos="fade-right" data-aos-delay="200">
+          <Link href="/practice/commercial-law" legacyBehavior>
+            <a>
+              <div className="practice-icon"><FaBriefcase /></div>
+              <h3>Commercial Law</h3>
+              <p>Legal support for businesses, contracts, trade regulations, and compliance.</p>
+            </a>
+          </Link>
+        </div>
+      </div>
+
+      <div className="values-column right">
+        <div className="value-card" data-aos="fade-left" data-aos-delay="0">
+          <Link href="/practice/corporate-law" legacyBehavior>
+            <a>
+              <div className="practice-icon"><FaRegBuilding /></div>
+              <h3>Corporate Law</h3>
+              <p>Guiding businesses through structuring, governance, and compliance.</p>
+            </a>
+          </Link>
+        </div>
+
+        <div className="value-card" data-aos="fade-left" data-aos-delay="100">
+          <Link href="/practice/conveyancing" legacyBehavior>
+            <a>
+              <div className="practice-icon"><FaLandmark /></div>
+              <h3>Conveyancing</h3>
+              <p>Expert legal guidance in property transactions and land transfers.</p>
+            </a>
+          </Link>
+        </div>
+
+        <div className="value-card" data-aos="fade-left" data-aos-delay="200">
+          <Link href="/practice/public-interest-litigation" legacyBehavior>
+            <a>
+              <div className="practice-icon"><FaUniversity /></div>
+              <h3>Public Interest Litigation</h3>
+              <p>Advocating for social justice, environmental conservation, and human rights.</p>
+            </a>
+          </Link>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
         {/* SECTION EIGHT: Success Stories */}
         <section className="success-stories">
