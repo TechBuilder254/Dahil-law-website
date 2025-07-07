@@ -4,6 +4,7 @@ import 'aos/dist/aos.css';
 import "../styles/globals.css";
 import "../styles/styles.css";
 import "../styles/about.css";
+import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton';
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -14,7 +15,12 @@ function MyApp({ Component, pageProps }) {
     });
   }, []);
 
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Component {...pageProps} />
+      <FloatingWhatsAppButton />
+    </>
+  );
 }
 
 export default MyApp;

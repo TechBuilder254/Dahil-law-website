@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const slides = [
   {
-    image: '/images/background1.jpg',
+    image: '/images/background1.webp',
     heading: 'GUIDING BUSINESSES TO SUCCESS',
     // SEO-friendly subheading options:
     // subheading: 'Your Trusted Legal Partners in Business Growth',
@@ -16,14 +16,14 @@ const slides = [
     link: '/practice'
   },
   {
-    image: '/images/rep.png',
+    image: '/images/rep.webp',
     heading: 'Guiding Businesses to Success',
     text: 'Corporate legal solutions designed for growth and compliance.',
     buttonText: 'EXPLORE SERVICES',
     link: '/practice'
   },
   {
-    image: '/images/rep.png',
+    image: '/images/rep.webp',
     heading: 'Protecting Families, Securing Futures',
     text: 'Compassionate legal assistance in family and succession matters.',
     buttonText: 'GET LEGAL HELP',

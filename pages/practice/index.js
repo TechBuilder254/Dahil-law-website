@@ -12,10 +12,22 @@ const practiceAreas = [
     icon: <FaLandmark className="mx-auto text-blue-600 w-12 h-12 mb-4" />
   },
   {
-    id: 'commercial-law',
-    title: 'Commercial Law',
-    description: 'Comprehensive legal support for businesses and commercial transactions.',
+    id: 'commercial-corporate-law',
+    title: 'Commercial & Corporate Law',
+    description: 'Comprehensive legal support for businesses, commercial transactions, and corporate governance.',
     icon: <FaBriefcase className="mx-auto text-blue-600 w-12 h-12 mb-4" />
+  },
+  {
+    id: 'tax-law',
+    title: 'Tax Law',
+    description: 'Expert advice and representation in tax compliance, disputes, and planning.',
+    icon: <FaBalanceScale className="mx-auto text-blue-600 w-12 h-12 mb-4" />
+  },
+  {
+    id: 'litigation',
+    title: 'Litigation & Personal Injuries',
+    description: 'Representation in litigation matters, including personal injury cases and public interest litigation.',
+    icon: <FaGavel className="mx-auto text-blue-600 w-12 h-12 mb-4" />
   },
   {
     id: 'public-interest-litigation',
@@ -58,12 +70,6 @@ const practiceAreas = [
     title: 'Banking & Finance Law',
     description: 'Legal assistance in financial transactions, loan agreements, and investment law.',
     icon: <FaMoneyBill className="mx-auto text-blue-600 w-12 h-12 mb-4" />
-  },
-  {
-    id: 'general-law',
-    title: 'General Law',
-    description: 'Comprehensive legal solutions covering a wide range of legal matters for individuals and businesses.',
-    icon: <FaUserShield className="mx-auto text-blue-600 w-12 h-12 mb-4" />
   },
   {
     id: 'intellectual-property-law',

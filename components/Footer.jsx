@@ -26,13 +26,13 @@ const Footer = () => {
         {/* Contact Us Section */}
         <div className="footer-contact">
           <h4>Contact Us</h4>
-          <p><FaPhoneAlt className="footer-icon" /> Phone: +254 716 038 472</p>
+          <p><FaPhoneAlt className="footer-icon" /> Phone: +254794006565</p>
           <p>
             <FaEnvelope className="footer-icon" /> 
-            E-mail: <a href="mailto:Abdulhakimdahir@daadvocates.co.ke" className="email-link">Abdulhakimdahir@daadvocates.co.ke</a>
+            E-mail: <a href="mailto:info@aadavocates.co.ke" className="email-link">info@aadavocates.co.ke</a>
           </p>
           <p><FaMapMarkerAlt className="footer-icon" /> Address: 623 WOOD AVENUE PLAZA, 8th Floor, Wood Avenue, Kilimani, Nairobi</p>
-          <p><FaMapMarkerAlt className="footer-icon" /> Address: Business Bay Square (BBS) lower ground office no 77$78, Nairobi</p>
+          <p><FaMapMarkerAlt className="footer-icon" /> Address: Business Bay Square (BBS) lower ground office no 77$78, Nairobi</p>
         </div>
      
       </div>

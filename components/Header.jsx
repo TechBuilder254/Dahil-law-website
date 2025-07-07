@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaTwitter } from 'react-icons/fa';
@@ -12,9 +12,6 @@ const TopBar = ({ hidden }) => {
           <span>9:00 AM - 11:00 PM</span>
         </div>
         <div className="right-group topbar-absolute-right">
-          <a href="https://twitter.com/yourlawfirm" target="_blank" rel="noopener noreferrer" className="social-icon">
-            <FaTwitter />
-          </a>
           <Link href="/contact">
             <button className="appointment-btn">Get Appointment</button>
           </Link>
@@ -29,6 +26,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [hideTopBar, setHideTopBar] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const navRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,6 +43,22 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
+  // Close menu when clicking outside
+  useEffect(() => {
+    if (!menuOpen) return;
+    const handleClickOutside = (event) => {
+      if (
+        navRef.current &&
+        !navRef.current.contains(event.target) &&
+        !event.target.closest('.animated-toggle')
+      ) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [menuOpen]);
+
   return (
     <>
       <TopBar hidden={hideTopBar} />
@@ -55,7 +69,7 @@ const Header = () => {
             <div className="header-logo">
               <Link href="/">
                 <Image
-                  src="/images/logo.jpg"
+                  src="/images/logo.webp"
                   alt="Kanun Law Logo"
                   width={150}
                   height={50}
@@ -64,30 +78,25 @@ const Header = () => {
               </Link>
             </div>
 
+            {/* Animated Hamburger/X Button */}
             <button
-              className="menu-toggle"
+              className={`menu-toggle animated-toggle${menuOpen ? ' open' : ''}`}
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle Menu"
+              aria-expanded={menuOpen}
+              aria-controls="main-nav"
             >
-              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-              </svg>
+              <span className="bar top"></span>
+              <span className="bar middle"></span>
+              <span className="bar bottom"></span>
             </button>
 
-            <nav className={`nav-links ${menuOpen ? 'mobile-open' : ''}`}>
-              <button
-                className="close-menu-btn"
-                onClick={() => setMenuOpen(false)}
-                aria-label="Close Menu"
-              >
-                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </button>
-
+            <nav
+              id="main-nav"
+              ref={navRef}
+              className={`nav-links ${menuOpen ? 'mobile-open' : ''}`}
+              tabIndex={-1}
+            >
               <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
               <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
               <Link href="/practice" onClick={() => setMenuOpen(false)}>Practice Areas</Link>
@@ -97,6 +106,8 @@ const Header = () => {
           </div>
         </div>
       </header>
+      {/* Inline styles for the animated hamburger/X */}
+                  
     </>
   );
 };

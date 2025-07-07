@@ -7,20 +7,6 @@ const AboutUs = () => {
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Left Column: Image */}
-          <div 
-            className="relative h-[400px] rounded-lg overflow-hidden shadow-xl"
-            data-aos="fade-right"
-            data-aos-duration="1200"
-            data-aos-easing="ease-out-cubic"
-          >
-            <img
-              src="/images/rep.png"
-              alt="Law firm office"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
           {/* Right Column: Content */}
           <div className="space-y-6">
             <h2 
@@ -29,7 +15,7 @@ const AboutUs = () => {
               data-aos-duration="1200"
               data-aos-easing="ease-out-cubic"
             >
-              About Dahil Affey & Associates
+              About Dahir Affey & Associates
             </h2>
             <p 
               className="text-gray-600"
@@ -48,24 +34,24 @@ const AboutUs = () => {
               data-aos-easing="ease-out-cubic"
             >
               <div className="flex items-center space-x-3 transform transition-all duration-500 hover:translate-x-2">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center">
+                  <svg className="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
                 <span className="text-gray-700">Expert legal counsel</span>
               </div>
               <div className="flex items-center space-x-3 transform transition-all duration-500 hover:translate-x-2">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center">
+                  <svg className="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
                 <span className="text-gray-700">Personalized attention</span>
               </div>
               <div className="flex items-center space-x-3 transform transition-all duration-500 hover:translate-x-2">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center">
+                  <svg className="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
@@ -84,6 +70,19 @@ const AboutUs = () => {
                 Learn More About Us
               </button>
             </Link>
+          </div>
+          {/* Left Column: Image */}
+          <div 
+            className="relative h-[400px] rounded-lg overflow-hidden shadow-xl"
+            data-aos="fade-right"
+            data-aos-duration="1200"
+            data-aos-easing="ease-out-cubic"
+          >
+            <img
+              src="/images/rep.webp"
+              alt="Law firm office"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>

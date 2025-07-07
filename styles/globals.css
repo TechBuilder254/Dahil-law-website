@@ -42,253 +42,11 @@ button:hover {
   }
 }
 
-/* Core Values Section - Updated Styling */
-.core-values-section {
-  background: white;
-  padding: 80px 0;
-  position: relative;
-  z-index: 1;
-}
-
-.core-values-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  z-index: -1;
-}
-
-.values-container {
-  position: relative;
-  z-index: 2;
-}
-
-.values-wrapper {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.values-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.value-card {
-  background: white;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-  overflow: hidden;
-}
-
-.value-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.value-card a {
-  display: block;
-  padding: 20px;
-  text-decoration: none;
-  color: #2c5282;
-}
-
-.practice-icon {
-  font-size: 1.8rem;
-  color: #2c3e50;
-  margin-bottom: 15px;
-  transition: color 0.3s ease;
-}
-
-.value-card:hover .practice-icon {
-  color: #3498db;
-}
-
-.value-card h3 {
-  color: #1a365d;
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  transition: color 0.3s ease;
-}
-
-.value-card:hover h3 {
-  color: #3498db;
-}
-
-.value-card p {
-  color: #4a5568;
-  font-size: 0.9rem;
-  margin: 0;
-  line-height: 1.5;
-}
-
-/* Responsive Design for Core Values */
-@media (max-width: 768px) {
-  .values-wrapper {
-    flex-direction: column;
-  }
-  
-  .values-column {
-    width: 100%;
-  }
-  
-  .value-card {
-    width: 100%;
-  }
-}
-
-/* Success Stories Section */
-.success-stories {
-  padding: 80px 0;
-  background: white;
-}
-
-.stories-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.stories-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.story-card {
-  background: #f8f9fa;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.story-card:hover {
-  transform: translateY(-5px);
-}
-
-.story-content {
-  padding: 30px;
-}
-
-.result {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 5px 15px;
-  background: #2c3e50;
-  color: white;
-  border-radius: 20px;
-  font-size: 0.9rem;
-}
-
-/* Community Impact Section */
-.community-impact {
-  padding: 80px 0;
-  background: #f8f9fa;
-}
-
-.impact-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.impact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.impact-card {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.impact-icon {
-  font-size: 2.5rem;
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-
-/* Timeline Section */
-.firm-timeline {
-  padding: 80px 0;
-  background: white;
-}
-
-.timeline-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.timeline {
-  position: relative;
-  margin-top: 40px;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 100%;
-  background: #2c3e50;
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 50px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.timeline-item:nth-child(odd) .content {
-  margin-left: 50px;
-}
-
-.timeline-item:nth-child(even) .content {
-  margin-right: 50px;
-  text-align: right;
-}
-
-.year {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #2c3e50;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.content {
-  width: 45%;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
 /* CTA Section */
 .cta-section {
   padding: 100px 0;
-  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  background: linear-gradient(135deg, #b6cadf 0%, #3498db 100%);
   color: white;
   text-align: center;
 }
@@ -301,7 +59,7 @@ button:hover {
 
 .cta-buttons {
   display: flex;
-  gap: 20px;
+  gap: 2px;
   justify-content: center;
   margin-top: 40px;
 }
@@ -363,7 +121,7 @@ button:hover {
 
 /* About Page Styles */
 .about-hero {
-  background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.9)), url('/images/hero-bg.jpg');
+  background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.9)), ;
   background-size: cover;
   background-position: center;
   color: white;

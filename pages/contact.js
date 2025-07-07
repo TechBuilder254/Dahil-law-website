@@ -97,11 +97,11 @@ const ContactPage = () => {
               <div className="info-text">
                 <p>
                   <strong>Email:</strong>{' '}
-                  <a href="mailto:info@yourlawfirm.com">info@yourlawfirm.com</a>
+                  <a href="mailto:info@aadavocates.co.ke">info@aadavocates.co.ke</a>
                 </p>
                 <p>
                   <strong>Phone:</strong>{' '}
-                  <a href="tel:+254712345678">+254 712 345 678</a>
+                  <a href="tel:+254794006565">+254 794 006 565</a>
                 </p>
                 <p>
                   <strong>Office:</strong> 4th Floor, ABC Towers, Nairobi, Kenya

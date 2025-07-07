@@ -36,80 +36,51 @@ const practiceData = {
     ],
     howWeHelp: "We provide strong defense strategies to protect your rights and ensure fair legal proceedings.",
   },
-  "commercial-law": {
-    title: "Commercial Law",
-    intro: "Providing legal solutions for businesses, contracts, and regulatory compliance.",
+  "commercial-corporate-law": {
+    title: "Commercial & Corporate Law",
+    intro: "Comprehensive legal support for businesses, commercial transactions, and corporate governance.",
     keyPrinciples: [
-      "Contract Law – Enforcing agreements between businesses.",
-      "Consumer Protection – Safeguarding buyers from fraud.",
-      "Corporate Compliance – Ensuring businesses follow legal regulations.",
+      "Business structuring and compliance",
+      "Contract drafting and review",
+      "Mergers and acquisitions",
+      "Corporate governance"
     ],
     commonCases: [
-      "Breach of contract disputes.",
-      "Business mergers and acquisitions.",
-      "Trade regulations and compliance issues.",
+      "Business formation",
+      "Shareholder agreements",
+      "Regulatory compliance"
     ],
-    howWeHelp: "Our firm assists businesses in navigating legal complexities and ensuring smooth operations.",
+    howWeHelp: "Our firm assists businesses in navigating legal complexities and ensuring smooth operations."
   },
-  "constitutional-law": {
-    title: "Constitutional Law",
-    intro: "Protecting fundamental rights and ensuring government accountability.",
+  "tax-law": {
+    title: "Tax Law",
+    intro: "Expert advice and representation in tax compliance, disputes, and planning.",
     keyPrinciples: [
-      "Judicial Review – Courts assess the constitutionality of laws.",
-      "Fundamental Rights – Protection of freedoms and civil liberties.",
-      "Government Structure – Separation of powers and checks and balances.",
+      "Tax compliance",
+      "Tax planning",
+      "Tax dispute resolution"
     ],
     commonCases: [
-      "Human rights violations.",
-      "Election disputes and governance issues.",
-      "Constitutional challenges to legislation.",
+      "Tax audits",
+      "Tax appeals",
+      "Corporate tax planning"
     ],
-    howWeHelp: "We fight for justice and uphold constitutional rights through legal advocacy.",
+    howWeHelp: "We provide comprehensive tax law services for individuals and businesses."
   },
-  "personal-injury-law": {
-    title: "Personal Injury Law",
-    intro: "Helping victims of negligence recover compensation for damages and injuries.",
+  "litigation": {
+    title: "Litigation & Personal Injuries",
+    intro: "Representation in litigation matters, including personal injury cases and public interest litigation.",
     keyPrinciples: [
-      "Duty of Care – Establishing responsibility for safety.",
-      "Negligence & Liability – Holding parties accountable for harm.",
-      "Compensation & Damages – Recovering medical costs and lost wages.",
+      "Civil litigation",
+      "Personal injury claims",
+      "Public interest litigation"
     ],
     commonCases: [
-      "Car accidents and workplace injuries.",
-      "Medical malpractice and wrongful death.",
-      "Slip and fall accidents.",
+      "Breach of contract",
+      "Negligence",
+      "Personal injury claims"
     ],
-    howWeHelp: "We ensure victims receive fair compensation and justice for their injuries.",
-  },
-  "public-interest-litigation": {
-    title: "Public Interest Litigation",
-    intro: "Advocating for social justice, environmental conservation, and human rights.",
-    keyPrinciples: [
-      "Access to Justice – Enables disadvantaged groups to seek legal remedies.",
-      "Government Accountability – Holding public institutions responsible.",
-      "Human Rights Protection – Advocating for civil liberties and social justice.",
-    ],
-    commonCases: [
-      "Environmental protection lawsuits.",
-      "Human rights violations and discrimination cases.",
-      "Government policy challenges.",
-    ],
-    howWeHelp: "We champion social justice through strategic litigation and advocacy.",
-  },
-  "corporate-law": {
-    title: "Corporate Law",
-    intro: "Guiding businesses through structuring, governance, and compliance.",
-    keyPrinciples: [
-      "Company Formation & Structure – Legal requirements for businesses.",
-      "Shareholder Rights – Protecting investor interests.",
-      "Corporate Governance – Ensuring ethical business practices.",
-    ],
-    commonCases: [
-      "Business incorporation and restructuring.",
-      "Shareholder disputes and mergers.",
-      "Regulatory compliance and financial oversight.",
-    ],
-    howWeHelp: "We provide expert legal counsel for businesses, ensuring compliance and success.",
+    howWeHelp: "We champion justice through strategic litigation and advocacy, including personal injury representation."
   },
   "banking-finance-law": {
     title: "Banking & Finance Law",
@@ -155,21 +126,6 @@ const practiceData = {
       "Trademark registration and brand protection.",
     ],
     howWeHelp: "We secure intellectual property rights and defend against infringement.",
-  },
-  "general-practice": {
-    title: "General Practice",
-    intro: "Comprehensive legal solutions covering a wide range of legal matters for individuals and businesses.",
-    keyPrinciples: [
-      "Legal Consultation – Offering guidance across multiple practice areas.",
-      "Dispute Resolution – Handling negotiations and alternative dispute mechanisms.",
-      "Client Advocacy – Representing individuals and businesses in legal matters.",
-    ],
-    commonCases: [
-      "Drafting contracts and agreements.",
-      "Providing legal opinions on various issues.",
-      "Advising on personal and business-related legal concerns.",
-    ],
-    howWeHelp: "We offer well-rounded legal expertise to address diverse client needs efficiently.",
   },
   "conveyancing": {
     title: "Conveyancing",

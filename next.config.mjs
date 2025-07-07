@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
+import createBundleAnalyzer from '@next/bundle-analyzer';
+
+const withBundleAnalyzer = createBundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export', // <-- this makes the app exportable as static HTML
   images: {
     unoptimized: true, // <-- avoids image optimization that InfinityFree can't run
     domains: ['localhost'],
@@ -17,4 +22,4 @@ const nextConfig = {
   trailingSlash: true, // This helps with static hosting
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);

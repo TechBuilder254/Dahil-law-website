@@ -7,6 +7,13 @@ html, body {
   box-sizing: border-box;
 }
 
+body {
+  background: #0b1437 !important;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: visible !important;
+}
+
 /* TopBar Styles */
 .top-bar {
   background: #142257;
@@ -135,7 +142,7 @@ html, body {
 
 /* General Header Wrapper */
 .site-header {
-  background: #0b1437;
+  background: linear-gradient(90deg, #0b1437 60%, #2563eb 100%);
   color: #fff;
   font-family: 'Segoe UI', sans-serif;
   position: fixed;
@@ -147,6 +154,7 @@ html, body {
   box-shadow: 0 2px 8px rgba(11, 20, 55, 0.04);
   min-height: 56px;
   overflow-x: hidden;
+  border-radius: 1.5rem;
 }
 
 .site-header.scrolled {
@@ -269,13 +277,54 @@ html, body {
   }
 
   .menu-toggle {
-    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: none;
     border: none;
-    color: #2ecc40;
-    padding: 8px;
     cursor: pointer;
     z-index: 1001;
+  }
+
+  .bar {
+    display: block;
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .bar.top {
+    top: 12px;
+    left: 6px;
+  }
+
+  .bar.middle {
+    top: 19px;
+    left: 6px;
+  }
+
+  .bar.bottom {
+    top: 26px;
+    left: 6px;
+  }
+
+  .menu-toggle.open .bar.top {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle.open .bar.middle {
+    opacity: 0;
+  }
+
+  .menu-toggle.open .bar.bottom {
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .close-menu-btn {
@@ -286,6 +335,7 @@ html, body {
     margin-bottom: 1rem;
     cursor: pointer;
     color: #fff;
+    height: 20vh;
   }
 }
 
@@ -364,22 +414,6 @@ html, body {
     gap: 8px;
   }
 
-  .social-icon i {
-    font-size: 14px;
-  }
-
-  .left-group span {
-    font-size: inherit;
-  }
-}
-
-/* Spacing helpers */
-.left-group span:first-child {
-  margin-right: 20px;
-}
-
-.right-group .social-icon {
-  margin-right: 12px;
 }
 
 .hero-section {
@@ -1385,7 +1419,7 @@ html, body {
 @media (max-width: 640px) {
   .header-main-bar {
     min-height: 54px;
-    height: 54px;
+    height: 84px;
     padding: 0 8px;
   }
   .header-logo {
@@ -1561,5 +1595,38 @@ main {
 @media (max-width: 640px) {
   main {
     padding-top: 35px; /* slightly reduced for mobile if header shrinks */
+  }
+}
+
+.floating-whatsapp-btn {
+  position: fixed !important;
+  right: max(8px, env(safe-area-inset-right)) !important;
+  bottom: max(8px, env(safe-area-inset-bottom)) !important;
+  z-index: 2147483647 !important;
+  background: #25D366 !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 50% !important;
+  width: 60px !important;
+  height: 60px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18) !important;
+  transition: background 0.2s, transform 0.2s !important;
+  pointer-events: auto !important;
+  font-size: 28px !important;
+}
+.floating-whatsapp-btn:hover {
+  background: #128C7E !important;
+  transform: scale(1.08) !important;
+  color: #fff !important;
+}
+
+@media (max-width: 600px) {
+  .floating-whatsapp-btn {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 22px !important;
   }
 }
