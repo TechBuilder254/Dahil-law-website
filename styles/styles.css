@@ -209,6 +209,7 @@ body {
   object-fit: contain;
   margin: 0;
   padding: 0;
+  height: 100px;
 }
 
 /* NAVIGATION */
@@ -1183,7 +1184,7 @@ body {
   }
 
   .header-logo img {
-    height: 40px;
+    height: 80px;
   }
 
   .nav-links {
@@ -1431,6 +1432,31 @@ body {
     max-width: 120px;
     object-fit: contain;
     display: block;
+  }
+  .site-header {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
+    min-width: 0 !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .top-bar {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
+    min-width: 0 !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .floating-whatsapp-btn {
+    position: fixed !important;
+    right: 16px !important;
+    left: auto !important;
+    bottom: 16px !important;
+    z-index: 9999 !important;
   }
 }
 
